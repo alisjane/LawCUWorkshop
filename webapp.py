@@ -14,23 +14,25 @@ HTML = """
     <style>
       :root {
         color-scheme: light;
-        --bg: #f2efe8;
-        --card: #fcfbf7;
+        --bg: #f3efe6;
+        --card: #fbf9f2;
         --text: #1f2933;
-        --muted: #5f6b76;
-        --accent: #163d34;
-        --accent-soft: #e7efe9;
-        --border: #d9d0bf;
-        --bad: #8a1f1f;
-        --bad-soft: #f8eaea;
+        --muted: #5c6470;
+        --accent: #8b1e3f;
+        --accent-dark: #5f142c;
+        --accent-soft: #f6e9ee;
+        --border: #d8c8b1;
+        --bad: #7a1f2d;
+        --bad-soft: #f8ebee;
+        --cu-gold: #c8a96b;
       }
       body {
         margin: 0;
         min-height: 100vh;
         display: grid;
         place-items: center;
-        background: linear-gradient(135deg, #f0ebde 0%, #e8e1d0 100%);
-        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+        background: linear-gradient(135deg, #f5efe2 0%, #e7decf 100%);
+        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
         color: var(--text);
       }
       .card {
@@ -39,13 +41,14 @@ HTML = """
         border: 1px solid var(--border);
         border-radius: 22px;
         padding: 2rem;
-        box-shadow: 0 16px 40px rgba(22, 61, 52, 0.12);
+        box-shadow: 0 16px 40px rgba(139, 30, 63, 0.12);
       }
       h1 {
         margin: 0 0 0.5rem;
         font-size: 2.05rem;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.03em;
         color: var(--accent);
+        font-family: "Georgia", "Times New Roman", serif;
       }
       p { color: var(--muted); line-height: 1.6; }
       form { display: grid; gap: 0.85rem; margin-top: 1.2rem; }
@@ -61,7 +64,7 @@ HTML = """
       }
       button {
         margin-top: 0.4rem;
-        background: linear-gradient(135deg, var(--accent), #255c49);
+        background: linear-gradient(135deg, var(--accent), var(--accent-dark));
         color: white;
         border: none;
         cursor: pointer;
@@ -80,7 +83,7 @@ HTML = """
         margin-top: 1rem;
         padding: 0.9rem 1rem;
         border-left: 4px solid var(--accent);
-        background: #f7f3ea;
+        background: linear-gradient(90deg, #f6e9ee 0%, #faf5ea 100%);
         color: var(--text);
         border-radius: 8px;
         font-size: 0.95rem;
@@ -92,6 +95,9 @@ HTML = """
     <main class="card">
       <h1>Thai Legal Age Checker</h1>
       <p>Enter the person's age and marital status to check whether they are legally an adult under Thai law.</p>
+      <div class="note" style="border-left-color: var(--cu-gold);">
+        A formal and university-aligned presentation for legal assessment and civic guidance.
+      </div>
       <div class="note">
         Under Thai law, the general age of majority is 20 years old. The relevant rule is found in the Civil and Commercial Code of Thailand, which treats a person as having full legal capacity upon reaching majority. A person under 20 may still be treated as an adult for some legal purposes if they are married or divorced.
       </div>
